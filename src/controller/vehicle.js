@@ -4,12 +4,15 @@ async function createVehicle (request, response){
     let message = "create Vechicle";
     let result = {};
     let error = {};
-    let { name, speed, craterSpeed } = request.body;
+    let { name, speed, craterSpeed, allowedInRainy, allowedInSunny, allowedInWindy } = request.body;
     try {
        const vehicle = new VehicleModel({
            name,
            speed,
-           craterSpeed
+           craterSpeed,
+           allowedInRainy,
+           allowedInSunny,
+           allowedInWindy
        });
        result.vehicle = await vehicle.save();
     } catch (error) {

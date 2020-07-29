@@ -15,7 +15,19 @@ export default new Schema({
             type: Number,
             required: true,
             maxlength: 128
-        }
+        },
+        allowedInWindy:{
+            type: Boolean,
+            required: true,
+        },
+        allowedInRainy:{
+            type: Boolean,
+            required: true,
+        },
+        allowedInSunny:{
+            type: Boolean,
+            required: true,
+        },
     }, {
     timestamps: true
 })
